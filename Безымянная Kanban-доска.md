@@ -4,23 +4,20 @@ kanban-plugin: board
 
 ---
 
-## 
+## test
 
-- [ ] [[test]]
-
-
-## Пулл
+- [ ] test
 
 
+## Завершенные задачи
 
-## Завершенные
-
+**Выполнено**
 
 
 
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false]}
 ```
 %%
