@@ -1,6 +1,6 @@
 ```php
 $eventManager = \Bitrix\Main\EventManager::getInstance();
-$eventManager->addEventHandler('Module', 'ModuleEvent', ['EventHandlers\\OnPageStartHandler', 'registerJqueryHandler']);
+$eventManager->addEventHandler('main', 'OnPageStart', ['EventHandlers\\OnPageStartHandler', 'registerJqueryHandler']);
 ```
 
 
