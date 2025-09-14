@@ -20,7 +20,7 @@ class OnPageStartHandler
         \CJSCore::Init('emptyHack');
     
         $arJSLib = array(
-            'js' => '/bitrix/js/main/jquery/jquery-1.12.4.min.js', 
+            'js' => '/bitrix/js/main/jquery/jquery-3.6.0.min.js', 
             'skip_core' => true
         );
         \CJSCore::RegisterExt('jquery', $arJSLib);
