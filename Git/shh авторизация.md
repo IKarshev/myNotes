@@ -1,4 +1,4 @@
-[документация](https://docs.github.com/ru/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[Документация](https://docs.github.com/ru/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Настройки пользователя:
 ```bash
@@ -25,12 +25,21 @@ github->профиль->settings->ssh and GPG keys->add new->вставить п
 start-ssh-agent.cmd
 Добавляем ключ — ssh-add ~/.ssh/<YOUR_GENERATED_RSA_FILE>
 
-linux
-	ssh-keygen -t ed25519 -C "karshev.ivan09.07.38@gmail.com"
-	github->профиль->settings->ssh and GPG keys->add new->вставить публичный ключ
-	включаем ssh — eval `ssh-agent -s`
-	Добавляем ключ — ssh-add ~/.ssh/<YOUR_GENERATED_RSA_FILE>
+### linux
+```bash
+ssh-keygen -t ed25519 -C "karshev.ivan09.07.38@gmail.com"
+```
 
-После создания и добавления ключа на git (если до этого не использовался ssh):
-	git remote remove origin
-	git remote add origin <ссылка "github->code->ssh">
+github->профиль->settings->ssh and GPG keys->add new->вставить публичный ключ
+включаем ssh — eval `ssh-agent -s`
+Добавляем ключ — ssh-add ~/.ssh/<YOUR_GENERATED_RSA_FILE>
+
+### Сбросить подключение:
+```bash
+git remote remove origin
+```
+
+### Установить новое подключение:
+```bash
+git remote add origin <ссылка "github->code->ssh">
+```
